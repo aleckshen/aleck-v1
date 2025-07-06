@@ -65,7 +65,7 @@ h2 {
 /* ABOUT ME */
 
 .about-me {
-    margin-top: 70px;
+    margin-top: 80px;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -82,7 +82,7 @@ h2 {
 
 /* IMAGES */
 
-img {
+.about-img img {
     width: 320px;
     height: 450px;
     margin-top: 4px;
@@ -125,7 +125,7 @@ img {
 /* PROJECTS */
 
 .projects {
-    margin-top: 70px;
+    margin-top: 80px;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -136,6 +136,45 @@ img {
     margin-bottom: 5px;
 }
 
+.projects #project-info {
+    margin-bottom: 75px;
+}
+
 .projects p {
-    margin-bottom: 65px;
+    margin-bottom: 8px;
+}
+
+.projects-img img {
+    width: 350px;
+    height: 230px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.projects-img.images-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    pointer-events: auto;
+    width: 100%;
+    padding-bottom: 10px;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+}
+
+.projects-img .images-track {
+    display: flex;
+    width: max-content;
+    animation: none; 
+}
+
+.projects-img::-webkit-scrollbar {
+  height: 8px;
+}
+.projects-img::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 4px;
+}
+.projects-img::-webkit-scrollbar-track {
+  background: transparent;
 }
