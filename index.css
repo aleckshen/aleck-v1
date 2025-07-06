@@ -65,7 +65,7 @@ h2 {
 /* ABOUT ME */
 
 .about-me {
-    margin-top: 30px;
+    margin-top: 70px;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -76,6 +76,66 @@ h2 {
     margin-bottom: 5px;
 }
 
-.about-me p {
+.about-me-text {
     margin-bottom: 25px;
+}
+
+/* IMAGES */
+
+img {
+    width: 320px;
+    height: 450px;
+    margin-top: 4px;
+}
+
+.images-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+    pointer-events: none;
+}
+
+.images-track {
+    display: flex;
+    width: max-content;
+    animation: scrollLeft 20s linear infinite;
+    animation-play-state: running;
+    will-change: transform;
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.images-track img {
+    width: 320px;
+    height: 450px;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+/* PROJECTS */
+
+.projects {
+    margin-top: 70px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.projects p {
+    margin-bottom: 65px;
 }
