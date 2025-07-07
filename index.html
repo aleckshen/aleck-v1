@@ -25,7 +25,8 @@
         <div class="top-right">
             <p>ABOUT</p>
             <p>PROJECTS</p>
-            <p>THEME</p>
+            <p id="theme-toggle" style="cursor: pointer;">THEME</p>
+
         </div>
 
     </div>
@@ -48,7 +49,10 @@
 
     </div>
 
+
+
     <div class="about-me">
+
         <h2>more about me:</h2>
         <p class="about-me-text">
             Hello, my name is Aleck. I'm currently a second year student studying at the University of Auckland.<br>
@@ -79,11 +83,13 @@
 
     </div>
 
-    <div class="projects">
+
+
+    <div class="qq">
         <h2>
             projects:
         </h2>
-        <p id="project-info">
+        <p id="qq-info">
             These are some of  the projects I've worked on/created over the course of my years as a computer<br>
             science major! These projects span personal initiatives and collaborative work, highlighting my ability <br>
             to build scalable, efficient, and user-focused applications.
@@ -97,7 +103,7 @@
             on the backend to serve static files and handle API requests. It integrates the OpenAI API to generate<br>
             quiz questions dynamically. The frontend is built with plain HTML, CSS, and JavaScript.
         </p>
-        <div class="projects-img images-wrapper">
+        <div class="qq-img images-wrapper">
             <div class="images-track">
                 <img src="./quick-quiz-images/qq1.jpg" loading="eager">
                 <img src="./quick-quiz-images/qq2.jpg" loading="eager">
@@ -107,6 +113,28 @@
                 <img src="./quick-quiz-images/qq6.jpg" loading="eager">
         </div>
     </div>
+
+    <div class="aleck">
+        <h2>
+            aleck's website!
+        </h2>
+        <p>This is my personal website created with HTML, CSS, and JavaScript, keeping the design minimal and<br>
+            clean while adding small interactive features.
+        </p>
+        <div class="qq-img images-wrapper">
+            <div class="images-track">
+                <img class="theme-img" src="./aleck-images/black1.jpg" data-light="./aleck-images/black1.jpg" data-dark="./aleck-images/white1.jpg" loading="eager">
+                <img class="theme-img" src="./aleck-images/black2.jpg" data-light="./aleck-images/black2.jpg" data-dark="./aleck-images/white2.jpg" loading="eager">
+                <img class="theme-img" src="./aleck-images/black3.jpg" data-light="./aleck-images/black3.jpg" data-dark="./aleck-images/white3.jpg" loading="eager">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="foot-note">
+        <p>Thank you for visiting my website!</p>
+    </div>
+    <div id="date"></div>
 
     <script src="index.js"></script>
 </body>
