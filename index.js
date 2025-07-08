@@ -13,7 +13,6 @@ function updateClock() {
 
     let timeString = now.toLocaleTimeString('en-NZ', options);
 
-    // Ensure AM/PM is uppercase
     timeString = timeString.replace(/\s?(am|pm)/i, match => ' ' + match.toUpperCase().trimStart());
 
     clockElement.textContent = timeString;
@@ -49,19 +48,38 @@ setInterval(updateDate, 1000 * 60);
 updateDate();
 
 
-// THEME TOGGLE + IMAGE SWITCHING 
+// THEME TOGGLE + IMAGE SWITCHING + THEME PERSISTENCE
+
 const themeToggle = document.getElementById('theme-toggle');
+const themeImages = document.querySelectorAll('.theme-img');
 
-themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
+function applySavedTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+    } else {
+        document.body.classList.remove('dark-theme');
+    }
+    updateThemeImages();
+}
 
+function updateThemeImages() {
     const isDark = document.body.classList.contains('dark-theme');
-    const themeImages = document.querySelectorAll('.theme-img');
-
     themeImages.forEach(img => {
         const newSrc = isDark ? img.dataset.dark : img.dataset.light;
         if (img.src !== newSrc) {
             img.src = newSrc;
         }
     });
+}
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    const isDark = document.body.classList.contains('dark-theme');
+
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+    updateThemeImages();
 });
+
+applySavedTheme();

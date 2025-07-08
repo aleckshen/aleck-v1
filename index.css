@@ -15,11 +15,34 @@ body {
   overflow-x: hidden;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 h2 {
     font-weight: 500;
 }
 
+a {
+    color: #808080;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #585858;
+    text-decoration: underline;
+}
+
+.top-right a {
+    color: #202020;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+
 /* DARK THEME STYLES */
+
 body.dark-theme {
     background-color: #202020;
     color: #f5f5f5;
@@ -60,6 +83,7 @@ body.dark-theme ::-webkit-scrollbar-thumb {
 }
 
 /* TOP */
+
 .top {
     display: flex;
     justify-content: space-between;
@@ -196,10 +220,12 @@ body.dark-theme ::-webkit-scrollbar-thumb {
 .qq-img::-webkit-scrollbar {
   height: 8px;
 }
+
 .qq-img::-webkit-scrollbar-thumb {
   background: #aaa;
   border-radius: 4px;
 }
+
 .qq-img::-webkit-scrollbar-track {
   background: transparent;
 }
@@ -209,4 +235,22 @@ body.dark-theme ::-webkit-scrollbar-thumb {
 .aleck {
     margin-top: 40px;
     margin-bottom: 210px;
+}
+
+/* FOOTNOTES */
+
+#date {
+    margin-bottom: 8px;
+    text-align: right;
+    color: #808080;
+}
+
+.socials {
+    display: flex;
+    gap: 20px;
+}
+
+.foot-note {
+    display: flex;
+    justify-content: space-between;
 }
