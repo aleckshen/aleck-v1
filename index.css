@@ -198,6 +198,18 @@ body.dark-theme .top-right a:hover {
     margin-bottom: 8px;
 }
 
+.title-date {
+    display: flex;
+}
+
+.title-date p {
+    font-size: 14px;
+    margin-left: 20px;
+    margin-bottom: 0;
+    margin-top: 5px;
+    padding: 0;
+}
+
 /* QUICK QUIZ IMAGES */
 
 .qq-img img {
